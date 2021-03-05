@@ -1,8 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-Using [material-ui](https://material-ui.com/pt/)
-Using [nodejs] [express] to get API goodreads
-Using [json-server]
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app); [material-ui](https://material-ui.com/pt/); [nodejs] [express] And [json-server](https://github.com/typicode/json-server)
 
 ## Getting Started
 
