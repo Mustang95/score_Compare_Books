@@ -1,5 +1,6 @@
 import styles from '../styles/components/CompareButton.module.css'
 import { useRouter } from 'next/router'
+import { useBooks } from '../../contexts/BooksContext'
 interface Cover {
 	__type: 'File'
 	name: string
@@ -27,13 +28,18 @@ interface Item {
 	item: [BooksDataContextData]
 }
 
-export default function CompareButton(props: { selected: string }) {
+export default function CompareButton(props: {
+	selectedId: string
+	bookSelected: any
+}) {
 	const router = useRouter()
+	const { bookSelect, setBookSelect } = useBooks()
 	function handleClick(event: any): void {
 		event.preventDefault()
+		setBookSelect(props.bookSelected)
 		router.push({
 			pathname: '/DetailBook',
-			query: { id: props.selected },
+			query: { id: props.selectedId },
 		})
 	}
 	return (
