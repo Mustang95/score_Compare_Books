@@ -4,13 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 First, run json-server to get infos of livros.json
 
-
 1º
-```
-npm install
-```
-
-2º
 ```
 json-server -p 8080 livros.json
 ```
@@ -21,9 +15,10 @@ And... run node server to get infos of API "book/review\_..." goodreads
 ```
 npm install
 ```
+something wrong with node start, that [error](https://stackoverflow.com/questions/53545800/internal-modules-cjs-loader-js582-throw-err/54938249) ocuur, so please use node server instead
 2º
 ```
-node start
+node server
 ```
 Finally, run the development server:
 
