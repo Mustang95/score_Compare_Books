@@ -7,29 +7,35 @@ Using [json-server]
 ## Getting Started
 
 First, run json-server to get infos of livros.json
-1º
 
+
+1º
 ```
 npm install
-2º
 ```
 
+2º
+```
 json-server -p 8080 livros.json
+```
 
 And... run node server to get infos of API "book/review\_..." goodreads
-1º
 
+1º
 ```
 npm install
+```
 2º
 ```
-
 node start
-
+```
 Finally, run the development server:
 
-````
+1º
+```
 yarn install
-```bash
+```
+2º
+```
 yarn dev
-````
+```
