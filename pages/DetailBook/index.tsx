@@ -1,5 +1,5 @@
 import styles from '../styles/pages/DetailBook.module.css'
-import AppBar from '../components/AppBar'
+import AppBarComponent from '../components/AppBarComponent'
 import { useBooks } from '../../contexts/BooksContext'
 import { withRouter, NextRouter } from 'next/router'
 import useWindowLocation from '../../hooks/useWindowLocation'
@@ -32,7 +32,7 @@ function DetailBook(props: DetailBookProps) {
 	return (
 		<div className={styles.container}>
 			<header>
-				<AppBar />
+				<AppBarComponent />
 			</header>
 			<section>
 				<ImageBook src={currentBook.cover.url} alt={currentBook.cover.name} />

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import AppBar from './components/AppBar'
+import AppBarComponent from './components/AppBarComponent'
 import styles from '../pages/styles/pages/Home.module.css'
 import BookCase from './components/BookCase'
 
@@ -9,7 +9,7 @@ export default function Home() {
 			<Head>
 				<title> Início | Books</title>
 			</Head>
-			<AppBar />
+			<AppBarComponent />
 			<BookCase />
 		</div>
 	)

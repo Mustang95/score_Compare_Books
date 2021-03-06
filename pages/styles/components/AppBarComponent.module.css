@@ -11,7 +11,22 @@
 	padding-right: 1rem;
 	gap: 1rem;
 }
-
+.menuButton {
+	background-image: url('/TAGLivrosLogo.png');
+	background-size: 'cover';
+	height: 5rem;
+	width: 6rem;
+}
+.toolbar {
+	min-height: 8rem;
+	align-items: flex-start;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+}
+.title {
+	flex-grow: 1;
+	align-self: flex-end;
+}
 .header > a {
 	font: 700 3rem 'PT Sans', sans-serif;
 }
