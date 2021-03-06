@@ -15,7 +15,6 @@ export default function useServerGoodReads() {
 						isbns: bookSelect.isbn,
 					},
 				})
-				debugger
 				setResponse(response.data)
 			} catch (error) {
 				console.log(error)

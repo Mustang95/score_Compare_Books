@@ -1,32 +1,7 @@
 import styles from '../styles/components/CompareButton.module.css'
 import { useRouter } from 'next/router'
 import { useBooks } from '../../contexts/BooksContext'
-interface Cover {
-	__type: 'File'
-	name: string
-	url: string
-}
-
-interface BooksDataContextData {
-	objectId: string
-	pages: number
-	createdAt: Date
-	updatedAt: Date
-	author: string
-	name: string
-	isbn: number
-	curator: string
-	cover: Cover
-	edition: string
-	active?: boolean
-	blocked: boolean
-	numRatings: number
-	totalRatings: number
-}
-
-interface Item {
-	item: [BooksDataContextData]
-}
+import Button from '@material-ui/core/Button'
 
 export default function CompareButton(props: {
 	selectedId: string
@@ -44,13 +19,15 @@ export default function CompareButton(props: {
 	}
 	return (
 		<div className={styles.buttonContainer}>
-			<button
-				onClick={handleClick}
-				type='button'
+			<Button
+				size='large'
 				className={styles.compareButton}
+				onClick={handleClick}
+				variant='contained'
+				color='secondary'
 			>
 				Compare
-			</button>
+			</Button>
 		</div>
 	)
 }

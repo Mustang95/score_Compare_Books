@@ -20,7 +20,7 @@
 .headersContainer {
 	width: 100%;
 }
-.headersContainer span:first-child {
+.title {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -30,7 +30,7 @@
 	margin-bottom: 1rem;
 }
 
-.headersContainer span:last-child {
+.author {
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
@@ -39,14 +39,11 @@
 	color: darkgray;
 }
 
-.footerContainer span:first-child {
+.infoMisc {
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
 }
-
-.footerContainer span:last-child {
-	display: flex;
-	align-items: flex-start;
-	justify-content: flex-start;
+.infoMiscMarginTop {
+	margin-top: 1rem;
 }

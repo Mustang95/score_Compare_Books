@@ -1,6 +1,14 @@
 import styles from '../styles/components/BookCase.module.css'
 import CompareButton from './CompareButton'
 import useServerJSON from '../../hooks/useServerJSON'
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import Card from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import Typography from '@material-ui/core/Typography'
+
 interface Cover {
 	__type: 'File'
 	name: string
@@ -36,8 +44,13 @@ interface BooksDataContextData {
 	numRatings: number
 	totalRatings: number
 }
-
+const useStyles = makeStyles({
+	root: {
+		maxWidth: 345,
+	},
+})
 export default function BookCase() {
+	const classes = useStyles()
 	const { responseData } = useServerJSON()
 
 	function orderMonth(currentMonth: string): number {
@@ -60,23 +73,43 @@ export default function BookCase() {
 	})
 
 	const booksOrderedByYearAndMonthReverse = booksOrderedByYearAndMonth?.reverse()
-	//setResponseData(booksOrderedByYearAndMonthReverse)
+
 	return (
 		<>
 			<div className={styles.listContainer}>
 				{booksOrderedByYearAndMonthReverse?.map(
 					(books: BooksDataContextData) => (
-						<div key={books.objectId}>
-							<article
-								className={`${styles.article} ${styles.fancy}
-            ${styles.fade} ${styles.grow}`}
-							>
-								<header>
-									<img src={books.cover.url} alt='vercel' />
-								</header>
-							</article>
-							<CompareButton selectedId={books.objectId} bookSelected={books} />
-						</div>
+						<Card
+							className={`${styles.article} ${styles.fancy} ${styles.fade} ${styles.grow}`}
+							key={books.objectId}
+						>
+							<CardMedia
+								component='img'
+								alt='Contemplative Reptile'
+								height='260'
+								width='100%'
+								image={books.cover.url}
+								title='Contemplative Reptile'
+							/>
+							<CardContent>
+								<Typography gutterBottom variant='subtitle1' component='h2'>
+									{books.name}
+								</Typography>
+								<Typography
+									variant='subtitle2'
+									color='textSecondary'
+									component='p'
+								>
+									{books.author}
+								</Typography>
+							</CardContent>
+							<CardActions>
+								<CompareButton
+									selectedId={books.objectId}
+									bookSelected={books}
+								/>
+							</CardActions>
+						</Card>
 					)
 				)}
 			</div>
