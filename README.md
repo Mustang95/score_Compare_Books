@@ -2,14 +2,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run json-server to get infos of livros.json
+First, run json-server to get infos of livros.json on this [repo](https://github.com/Mustang95/fakeREST)
 
 1º
 ```
 json-server -p 8080 livros.json
 ```
 
-And... run node server to get infos of API "book/review\_..." goodreads
+And... run node server to get infos of API goodreads from [repo](https://github.com/Mustang95/serverGoodReads/tree/master)
 
 1º
 ```
